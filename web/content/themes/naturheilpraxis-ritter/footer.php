@@ -30,7 +30,7 @@
 		</div>
 		<div class="row text-center">
 			<div class="col-xs-12">
-				<small><i class="fa fa-code"></i> with <i class="fa fa-heart"></i> by <a href="http://juerghunziker.ch">Jürg Hunziker</a></small>
+				<small>&copy; <?php the_time('Y'); ?> <i class="fa fa-code"></i> with <i class="fa fa-heart"></i> by <a href="http://juerghunziker.ch">Jürg Hunziker</a></small>
 			</div>
 		</div>
 	</div>
