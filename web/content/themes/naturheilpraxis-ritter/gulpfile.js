@@ -22,22 +22,22 @@ gulp.task('sass', function() {
         lineNumbers: false,
         loadPath: './assets/scss/*'
     })
-        .pipe(minifycss())
-        .pipe(autoprefixer('last 2 version'))
-        .pipe(concat('app.css'))
-        .pipe(gulp.dest('./assets/css'))
-        .pipe(notify({ message: 'Styles task complete' }));
+    .pipe(minifycss())
+    .pipe(autoprefixer('last 2 version'))
+    .pipe(concat('app.css'))
+    .pipe(gulp.dest('./assets/css'))
+    .pipe(notify({ message: 'Styles task complete' }));
 });
 
 gulp.task('scripts', function() {
     return gulp.src([
-        './assets/js/functions.js',
         './assets/external/bootstrap-sass-3.3.5/assets/javascripts/bootstrap.js',
+        './assets/external/bootstrap3-typeahead-3.1.0/bootstrap3-typeahead.js',
         './assets/js/app.js'
     ])
-        .pipe(concat('app.min.js'))
-        .pipe(gulp.dest('./assets/js'))
-        .pipe(notify({ message: 'Scripts task complete' }));
+    .pipe(concat('app.min.js'))
+    .pipe(gulp.dest('./assets/js'))
+    .pipe(notify({ message: 'Scripts task complete' }));
 });
 
 
