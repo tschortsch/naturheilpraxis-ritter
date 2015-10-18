@@ -1,2 +1,2 @@
-# naturheilpraxis-buchs
-Website for Naturheilpraxis Buchs
+# naturheilpraxis-ritter
+Website for Naturheilpraxis Ritter: http://naturheilpraxis-ritter.ch
