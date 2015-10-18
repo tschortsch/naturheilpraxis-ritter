@@ -4,18 +4,17 @@
 // Start the loop.
 while ( have_posts() ) : the_post();
 ?>
-	<header class="page-header">
+	<header class="main-header">
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12">
-					<?php bootstrap_breadcrumb(); ?>
 					<?php the_title( '<h1>', '</h1>' ); ?>
 				</div>
 			</div>
 		</div>
 	</header>
 
-	<div class="container">
+	<div class="container buffer-top">
 		<main class="row">
 			<article <?php post_class( 'col-xs-12' ); ?>>
 

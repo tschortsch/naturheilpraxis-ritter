@@ -22,28 +22,30 @@
 
 <body <?php body_class(); ?>>
 
+<?php
+$blog_name = get_bloginfo( 'name' );
+?>
+
 <nav class="navbar navbar-default">
 	<div class="container">
 		<!-- Brand and toggle get grouped for better mobile display -->
 		<div class="navbar-header">
-			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-				<span class="sr-only">Toggle navigation</span>
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main_navigation" aria-expanded="false">
+				<span class="sr-only"><?php esc_html_e( 'Toggle navigation', 'nhpr' ); ?></span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</button>
-			<a class="navbar-brand" href="#">Naturheilpraxis Ritter</a>
+			<a class="navbar-brand" href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_attr_e( $blog_name ); ?></a>
 		</div>
 
-		<!-- Collect the nav links, forms, and other content for toggling -->
-		<div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
-			<ul class="nav navbar-nav">
-				<li class="active"><a href="#">Angebot</a></li>
-				<li><a href="#">Preise</a></li>
-				<li><a href="#">Termin finden</a></li>
-				<li><a href="#">Über mich</a></li>
-				<li><a href="#">Kontakt</a></li>
-			</ul>
+		<div class="collapse navbar-collapse" id="main_navigation">
+            <?php
+            wp_nav_menu( array(
+                'theme_location' => 'main_navigation',
+                'menu_class'     => 'nav navbar-nav navbar-right',
+            ) );
+            ?>
 		</div><!-- /.navbar-collapse -->
 	</div><!-- /.container-fluid -->
 </nav>

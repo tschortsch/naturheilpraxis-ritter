@@ -19,8 +19,8 @@ $random_placeholder = $form_placeholders[$random_placeholder_index];
                 <p class="lead slogan"><?php esc_attr_e( $blog_description ); ?></p>
                 <form>
                     <div class="form-group text-center">
-                        <label for="exampleInputEmail1" class="sr-only"><?php esc_attr_e( $random_placeholder ); ?></label>
-                        <input type="text" class="form-control input-lg text-center" id="exampleInputEmail1" placeholder="<?php esc_attr_e( $random_placeholder ); ?>">
+                        <label for="ailment" class="sr-only"><?php esc_attr_e( $random_placeholder ); ?></label>
+                        <input type="text" class="form-control input-lg text-center" id="ailment" placeholder="<?php esc_attr_e( $random_placeholder ); ?>">
                     </div>
                 </form>
             </div>
@@ -53,7 +53,7 @@ endwhile;
 <section class="container">
     <div class="row text-center">
         <div class="col-xs-12">
-            <button class="btn btn-primary btn-lg" type="submit"><?php esc_attr_e( __( 'Jetzt einen Termin finden' ) ); ?></button>
+            <button class="btn btn-primary btn-lg" type="submit"><?php esc_attr_e( 'Jetzt einen Termin finden', 'nhpr' ); ?></button>
         </div>
     </div>
 </section>
