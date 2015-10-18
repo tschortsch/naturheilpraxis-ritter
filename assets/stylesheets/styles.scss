@@ -5,8 +5,16 @@
 @import "bootstrap_variables";
 @import "../boostrap-sass/stylesheets/bootstrap";
 
+body {
+    margin-top: $navbar-height;
+}
+
 .navbar {
     border: 0;
+}
+small, .small {
+    color: $gray;
+    font-size: 75%;
 }
 
 $buffer-size: 40px;
@@ -45,17 +53,25 @@ $buffer-size: 40px;
 
 .main-footer {
     color: #fff;
-    background: $gray-dark;
-    box-shadow: 0 1000px 0 1000px $gray-dark;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    background: $gray;
+    box-shadow: 0 1000px 0 1000px $gray;
+    padding-top: $buffer-size;
+    padding-bottom: $buffer-size / 2;
 
     .icon {
         font-size: 50px;
         margin-right: 20px;
+        margin-top: -14px;
     }
     .text {
         overflow: hidden;
-        margin-top: 10px;
+    }
+
+    a {
+        color: #fff;
+    }
+
+    small, small a {
+        color: $gray-lighter;
     }
 }
