@@ -16,24 +16,17 @@
 					<i class="fa fa-user"></i>
 				</div>
 				<div class="text">
-					Email: stefanie.ritter@naturheilpraxis-ritter.ch<br>
+					Email: <a href="mailto:stefanie.ritter@naturheilpraxis-ritter.ch">stefanie.ritter@naturheilpraxis-ritter.ch</a><br>
 					Tel.: 012 123 23 23
 				</div>
 			</div>
-			<div class="col-md-2">
-				<ul class="list-unstyled">
-					<li><a href="#">Angebot</a></li>
-					<li><a href="#">Preise</a></li>
-					<li><a href="#">Über mich</a></li>
-				</ul>
-			</div>
-			<div class="col-md-2">
-				<ul class="list-unstyled">
-					<li><a href="#">Termin finden</a></li>
-					<li><a href="#">Kontakt</a></li>
-					<li><a href="#">Impressum</a></li>
-				</ul>
-			</div>
+            <?php
+            wp_nav_menu( array(
+                'theme_location' => 'footer_navigation',
+                'container_class' => 'col-md-4',
+                'menu_class'     => 'list-unstyled footer-navigation',
+            ) );
+            ?>
 		</div>
 		<div class="row text-center">
 			<div class="col-xs-12">
