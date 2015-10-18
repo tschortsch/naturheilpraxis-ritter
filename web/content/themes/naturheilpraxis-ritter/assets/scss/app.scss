@@ -1,0 +1,77 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,600);
+@import url(https://fonts.googleapis.com/css?family=Dancing+Script);
+@import url(https://fonts.googleapis.com/css?family=Tangerine:400,700);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
+@import "bootstrap_variables";
+@import "../external/boostrap-sass-3.3.5/stylesheets/bootstrap";
+
+body {
+    margin-top: $navbar-height;
+}
+
+.navbar {
+    border: 0;
+}
+small, .small {
+    color: $gray;
+    font-size: 75%;
+}
+
+$buffer-size: 40px;
+
+.slogan {
+    font-family: 'Tangerine', cursive;
+    font-size: 40px;
+}
+
+.main-header {
+    background: url('../Images/main-header-bg-2.jpg') no-repeat center center;
+    background-size: cover;
+    color: $text-color;
+    padding: $buffer-size 0;
+    text-shadow: 0 0 5px rgba(255, 255, 255, .5);
+
+    h1 {
+        color: $brand-primary-dark;
+        font-size: 50px;
+    }
+
+    @media (min-width: $grid-float-breakpoint) {
+        input {
+            width: 60%;
+            margin: auto;
+        }
+    }
+}
+
+.buffer-bottom {
+    margin-bottom: $buffer-size;
+}
+.buffer-top {
+    margin-top: $buffer-size;
+}
+
+.main-footer {
+    color: #fff;
+    background: $gray;
+    box-shadow: 0 1000px 0 1000px $gray;
+    padding-top: $buffer-size;
+    padding-bottom: $buffer-size / 2;
+
+    .icon {
+        font-size: 50px;
+        margin-right: 20px;
+        margin-top: -14px;
+    }
+    .text {
+        overflow: hidden;
+    }
+
+    a {
+        color: #fff;
+    }
+
+    small, small a {
+        color: $gray-lighter;
+    }
+}
