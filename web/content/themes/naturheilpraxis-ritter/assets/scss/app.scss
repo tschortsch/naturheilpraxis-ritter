@@ -1,19 +1,36 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,600);
-@import url(https://fonts.googleapis.com/css?family=Dancing+Script);
 @import url(https://fonts.googleapis.com/css?family=Tangerine:400,700);
 @import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css);
 @import "bootstrap_variables";
+@import "variables";
+@import "wp_tinymce_styles";
+@import "responsive_alignment";
 @import "../external/boostrap-sass-3.3.5/stylesheets/bootstrap";
 
 .navbar {
     border: 0;
 }
 small, .small {
-    color: $gray;
-    font-size: 75%;
-}
+    color: $gray-light;
 
-$buffer-size: 40px;
+    a {
+        color: $link-color;
+    }
+}
+p.small {
+    margin-bottom: 8px;
+}
+.breadcrumb {
+    >li+li:before {
+        font: normal normal normal 14px/1 FontAwesome;
+        padding: 0 8px;
+        content: "\f105";
+    }
+
+    li.active a {
+        color: $gray-light;
+    }
+}
 
 .slogan {
     font-family: 'Tangerine', cursive;
