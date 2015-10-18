@@ -1,15 +1,26 @@
 <?php get_header(); ?>
 
+<?php
+$blog_name = get_bloginfo( 'name' );
+$blog_description = get_bloginfo( 'description' );
+$form_placeholders = array(
+    __( 'Wo drückt der Schuh?' ),
+    __( 'Was liegt Ihnen auf dem Magen?' ),
+);
+$random_placeholder_index = array_rand( $form_placeholders, 1 );
+$random_placeholder = $form_placeholders[$random_placeholder_index];
+?>
+
 <section class="main-header">
     <div class="container">
         <div class="row">
             <div class="col-xs-12">
-                <h1>Naturheilpraxis Ritter</h1>
-                <p class="lead slogan">Gesund, Vital, Zufrieden</p>
+                <h1><?php esc_attr_e( $blog_name ); ?></h1>
+                <p class="lead slogan"><?php esc_attr_e( $blog_description ); ?></p>
                 <form>
                     <div class="form-group text-center">
-                        <label for="exampleInputEmail1" class="sr-only">Problem?</label>
-                        <input type="text" class="form-control input-lg text-center" id="exampleInputEmail1" placeholder="Wo drückt der Schuh?">
+                        <label for="exampleInputEmail1" class="sr-only"><?php esc_attr_e( $random_placeholder ); ?></label>
+                        <input type="text" class="form-control input-lg text-center" id="exampleInputEmail1" placeholder="<?php esc_attr_e( $random_placeholder ); ?>">
                     </div>
                 </form>
             </div>
@@ -17,30 +28,32 @@
     </div>
 </section>
 
-<section class="container buffer-top">
-    <div class="row">
-        <div class="col-md-6">
-            <h2>Konsultieren Sie mich bei:</h2>
-            <ul>
-                <li>Kopfschmerzen</li>
-                <li>Erschöpfung</li>
-                <li>Verdauungsbeschwerden</li>
-                <li>...</li>
-            </ul>
-        </div>
-        <div class="col-md-6">
-            <h2>Für Ihr Wohlbefinden therapiere ich mittels:</h2>
-            <ul>
-                <li>Bioresonanz Austestung</li>
-                <li>Fussreflexzonen- und Gesundheits-Massage</li>
-                <li>Pflanzenheilkunde</li>
-                <li>Ausleitende Verfahren</li>
-            </ul>
-        </div>
-    </div>
+<?php
+// Start the loop.
+while ( have_posts() ) : the_post();
+    ?>
+
+    <section class="container buffer-top">
+        <main class="row">
+            <article <?php post_class( 'col-xs-12' ); ?>>
+
+                <div class="entry-content">
+                    <?php the_content(); ?>
+                </div><!-- .entry-content -->
+
+            </article><!-- #post-## -->
+        </main><!-- .site-main -->
+    </section><!-- .content-area -->
+
+    <?php
+// End the loop.
+endwhile;
+?>
+
+<section class="container">
     <div class="row text-center">
         <div class="col-xs-12">
-            <button class="btn btn-primary btn-lg" type="submit">Jetzt einen Termin finden</button>
+            <button class="btn btn-primary btn-lg" type="submit"><?php esc_attr_e( __( 'Jetzt einen Termin finden' ) ); ?></button>
         </div>
     </div>
 </section>
