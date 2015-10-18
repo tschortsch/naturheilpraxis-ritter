@@ -5,10 +5,6 @@
 @import "bootstrap_variables";
 @import "../external/boostrap-sass-3.3.5/stylesheets/bootstrap";
 
-body {
-    margin-top: $navbar-height;
-}
-
 .navbar {
     border: 0;
 }
@@ -25,7 +21,7 @@ $buffer-size: 40px;
 }
 
 .main-header {
-    background: url('../Images/main-header-bg-2.jpg') no-repeat center center;
+    background: url('../images/main-header-bg.jpg') no-repeat center center;
     background-size: cover;
     color: $text-color;
     padding: $buffer-size 0;
