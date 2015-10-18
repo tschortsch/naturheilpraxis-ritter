@@ -20,7 +20,7 @@ $random_placeholder = $form_placeholders[$random_placeholder_index];
                 <form>
                     <div class="form-group text-center">
                         <label for="ailment" class="sr-only"><?php esc_attr_e( $random_placeholder ); ?></label>
-                        <input type="text" class="form-control input-lg text-center" id="ailment" placeholder="<?php esc_attr_e( $random_placeholder ); ?>">
+                        <input type="text" class="form-control input-lg text-center" id="ailment" placeholder="<?php esc_attr_e( $random_placeholder ); ?>" data-provide="typeahead" autocomplete="off">
                     </div>
                 </form>
             </div>
@@ -34,15 +34,7 @@ while ( have_posts() ) : the_post();
     ?>
 
     <section class="container buffer-top">
-        <main class="row">
-            <article <?php post_class( 'col-xs-12' ); ?>>
-
-                <div class="entry-content">
-                    <?php the_content(); ?>
-                </div><!-- .entry-content -->
-
-            </article><!-- #post-## -->
-        </main><!-- .site-main -->
+        <?php the_content(); ?>
     </section><!-- .content-area -->
 
     <?php

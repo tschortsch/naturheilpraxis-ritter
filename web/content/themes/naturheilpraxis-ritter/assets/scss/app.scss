@@ -50,9 +50,8 @@ p.small {
     }
 
     @media (min-width: $grid-float-breakpoint) {
-        input {
-            width: 60%;
-            margin: auto;
+        .form-group {
+            padding: 0 10%;
         }
     }
 }
