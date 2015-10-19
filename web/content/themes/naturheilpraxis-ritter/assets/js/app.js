@@ -1,5 +1,6 @@
-$( document ).ready(function() {
-    $("#ailment").typeahead({
-        source: ["item1","item2","item3"]
+$(document).ready(function() {
+    $("#ailment").select2({
+        theme: "bootstrap",
+        language: "de"
     });
 });

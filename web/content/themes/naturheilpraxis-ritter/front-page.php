@@ -21,8 +21,14 @@ $random_placeholder = $form_placeholders[$random_placeholder_index];
             <div class="col-md-offset-2 col-md-8">
                 <form>
                     <div class="form-group text-center">
-                        <label for="ailment" class="sr-only"><?php esc_attr_e( $random_placeholder ); ?></label>
-                        <input type="text" class="form-control input-lg text-center" id="ailment" placeholder="<?php esc_attr_e( $random_placeholder ); ?>" data-provide="typeahead" autocomplete="off">
+                        <div class="input-group input-group-lg">
+                            <label for="ailment" class="sr-only"><?php esc_attr_e( $random_placeholder ); ?></label>
+                            <select class="form-control input-lg" id="ailment">
+                                <option value=""><?php esc_attr_e( $random_placeholder ); ?></option>
+                                <option value="kopfschmerzen">Kopfschmerzen</option>
+                                <option value="veraduungsprobleme">Verdauungsprobleme</option>
+                            </select>
+                        </div>
                     </div>
                 </form>
             </div>
