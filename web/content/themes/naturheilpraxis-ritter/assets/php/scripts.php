@@ -18,6 +18,16 @@ function nhpr_scripts() {
 
 	wp_register_script( 'app', get_template_directory_uri() . '/assets/js/app.min.js', false, null, true );
 	wp_enqueue_script( 'app' );
+
+    $form_placeholders = array(
+        __( 'Wo drückt der Schuh?' ),
+        __( 'Was liegt Ihnen auf dem Magen?' ),
+    );
+    $random_placeholder_index = array_rand( $form_placeholders, 1 );
+    $random_placeholder = $form_placeholders[$random_placeholder_index];
+    wp_localize_script( 'app', 'l10n', array(
+        'ailment_placeholder' => $random_placeholder,
+    ) );
 }
 
 add_action( 'wp_enqueue_scripts', 'nhpr_scripts' );

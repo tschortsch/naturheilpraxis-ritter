@@ -3,12 +3,6 @@
 <?php
 $blog_name = get_bloginfo( 'name' );
 $blog_description = get_bloginfo( 'description' );
-$form_placeholders = array(
-    __( 'Wo drückt der Schuh?' ),
-    __( 'Was liegt Ihnen auf dem Magen?' ),
-);
-$random_placeholder_index = array_rand( $form_placeholders, 1 );
-$random_placeholder = $form_placeholders[$random_placeholder_index];
 ?>
 
 <section class="main-header">
@@ -22,9 +16,9 @@ $random_placeholder = $form_placeholders[$random_placeholder_index];
                 <form>
                     <div class="form-group text-center">
                         <div class="input-group input-group-lg">
-                            <label for="ailment" class="sr-only"><?php esc_attr_e( $random_placeholder ); ?></label>
+                            <label for="ailment" class="sr-only"><?php esc_attr_e( 'Beschwerde', 'nhpr' ); ?></label>
                             <select class="form-control input-lg" id="ailment">
-                                <option value=""><?php esc_attr_e( $random_placeholder ); ?></option>
+                                <option value=""><?php esc_attr_e( 'Beschwerde', 'nhpr' ); ?></option>
                                 <option value="kopfschmerzen">Kopfschmerzen</option>
                                 <option value="veraduungsprobleme">Verdauungsprobleme</option>
                             </select>
