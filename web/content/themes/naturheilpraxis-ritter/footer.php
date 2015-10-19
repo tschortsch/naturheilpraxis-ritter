@@ -6,7 +6,7 @@ $phone = get_theme_mod( 'phone' );
 <footer class="main-footer buffer-top">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-3">
+			<div class="col-md-3 col-sm-6">
 				<div class="icon pull-left">
 					<i class="fa fa-map-marker"></i>
 				</div>
@@ -14,7 +14,7 @@ $phone = get_theme_mod( 'phone' );
                     <?php echo wpautop( $address ); ?>
 				</address>
 			</div>
-			<div class="col-md-5">
+			<div class="col-md-5 col-sm-6">
 				<div class="icon pull-left">
 					<i class="fa fa-pencil"></i>
 				</div>
@@ -26,7 +26,7 @@ $phone = get_theme_mod( 'phone' );
             <?php
             wp_nav_menu( array(
                 'theme_location' => 'footer_navigation',
-                'container_class' => 'col-md-4',
+                'container_class' => 'col-md-4 col-xs-12',
                 'menu_class'     => 'list-unstyled footer-navigation',
             ) );
             ?>
