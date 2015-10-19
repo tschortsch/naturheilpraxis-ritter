@@ -17,6 +17,8 @@ $random_placeholder = $form_placeholders[$random_placeholder_index];
             <div class="col-xs-12">
                 <h1><?php esc_attr_e( $blog_name ); ?></h1>
                 <p class="lead slogan"><?php esc_attr_e( $blog_description ); ?></p>
+            </div>
+            <div class="col-md-offset-2 col-md-8">
                 <form>
                     <div class="form-group text-center">
                         <label for="ailment" class="sr-only"><?php esc_attr_e( $random_placeholder ); ?></label>

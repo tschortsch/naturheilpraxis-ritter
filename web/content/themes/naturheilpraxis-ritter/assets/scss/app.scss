@@ -48,12 +48,6 @@ p.small {
         color: $brand-primary-dark;
         font-size: 50px;
     }
-
-    @media (min-width: $grid-float-breakpoint) {
-        .form-group {
-            padding: 0 10%;
-        }
-    }
 }
 
 .buffer-bottom {
