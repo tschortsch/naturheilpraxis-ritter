@@ -1,3 +1,8 @@
+<?php
+$blog_email = get_bloginfo( 'admin_email' );
+$address = get_theme_mod( 'address' );
+$phone = get_theme_mod( 'phone' );
+?>
 <footer class="main-footer buffer-top">
 	<div class="container">
 		<div class="row">
@@ -6,18 +11,16 @@
 					<i class="fa fa-map-marker"></i>
 				</div>
 				<address class="text">
-					<strong>Naturheilpraxis Ritter</strong><br>
-					Blastrasse 123<br>
-					1234 Aadorf
+                    <?php echo wpautop( $address ); ?>
 				</address>
 			</div>
 			<div class="col-md-5">
 				<div class="icon pull-left">
-					<i class="fa fa-user"></i>
+					<i class="fa fa-pencil"></i>
 				</div>
 				<div class="text">
-					Email: <a href="mailto:stefanie.ritter@naturheilpraxis-ritter.ch">stefanie.ritter@naturheilpraxis-ritter.ch</a><br>
-					Tel.: 012 123 23 23
+                    <?php printf( __( 'Email: <a href="mailto:%1$s">%1$s</a>', 'nhpr' ), esc_attr( $blog_email ) ); ?><br>
+					<?php printf( __( 'Tel.: %1$s', 'nhpr' ), esc_attr( $phone ) ); ?>
 				</div>
 			</div>
             <?php
