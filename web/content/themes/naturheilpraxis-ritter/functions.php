@@ -7,6 +7,7 @@ $frontend_includes = array(
 	'assets/php/init.php',
 	'assets/php/scripts.php',
 	'assets/php/theme_functions.php',
+    'assets/php/customizer.php',
 );
 
 foreach ( $frontend_includes as $file ) {
