@@ -20,7 +20,7 @@ $phone = get_theme_mod( 'phone' );
 				</div>
 				<div class="text">
                     <?php printf( __( 'Email: <a href="mailto:%1$s">%1$s</a>', 'nhpr' ), esc_attr( $blog_email ) ); ?><br>
-					<?php printf( __( 'Tel.: %1$s', 'nhpr' ), esc_attr( $phone ) ); ?>
+					<?php printf( __( 'Telefon: %1$s', 'nhpr' ), esc_attr( $phone ) ); ?>
 				</div>
 			</div>
             <?php
