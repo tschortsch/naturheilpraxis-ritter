@@ -39,4 +39,12 @@ while ( have_posts() ) : the_post();
 endwhile;
 ?>
 
+<section class="container">
+    <div class="row text-center">
+        <div class="col-xs-12">
+            <a href="<?php echo esc_url( home_url( '/termin-finden' ) ); ?>" class="btn btn-primary btn-lg" role="button"><?php esc_attr_e( 'Jetzt einen Termin finden', 'nhpr' ); ?></a>
+        </div>
+    </div>
+</section>
+
 <?php get_footer(); ?>
