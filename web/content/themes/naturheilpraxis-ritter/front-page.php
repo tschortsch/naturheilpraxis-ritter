@@ -19,8 +19,12 @@ $blog_description = get_bloginfo( 'description' );
                             <label for="ailment" class="sr-only"><?php esc_attr_e( 'Beschwerde', 'nhpr' ); ?></label>
                             <select class="form-control input-lg" id="ailment">
                                 <option value=""><?php esc_attr_e( 'Beschwerde', 'nhpr' ); ?></option>
-                                <option value="kopfschmerzen">Kopfschmerzen</option>
-                                <option value="veraduungsprobleme">Verdauungsprobleme</option>
+                                <?php
+                                $sufferings = get_terms( 'suffering' );
+                                foreach( $sufferings as $suffering ) {
+                                    echo '<option value="' . $suffering->slug . '">' . $suffering->name . '<option>';
+                                }
+                                ?>
                             </select>
                         </div>
                     </div>
