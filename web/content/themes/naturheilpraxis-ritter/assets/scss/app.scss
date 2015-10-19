@@ -50,6 +50,10 @@ p.small {
         color: $brand-primary-dark;
         font-size: 50px;
     }
+
+    .select2-container--bootstrap .select2-selection {
+        font-family: $font-family-base;
+    }
 }
 
 .buffer-bottom {
