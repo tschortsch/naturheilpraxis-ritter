@@ -16,7 +16,7 @@ $phone = get_theme_mod( 'phone' );
 			</div>
 			<div class="col-md-5 col-sm-6">
 				<div class="icon pull-left">
-					<i class="fa fa-pencil"></i>
+					<i class="fa fa-user"></i>
 				</div>
 				<div class="text">
                     <?php printf( __( 'Email: <a href="mailto:%1$s">%1$s</a>', 'nhpr' ), esc_attr( $blog_email ) ); ?><br>
